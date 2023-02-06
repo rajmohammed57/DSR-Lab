@@ -1,7 +1,9 @@
 mytraindata <- read.csv("DataSets\\servicetraindata.csv")
 mytestdata <- read.csv("DataSets\\servicetestdata.csv")
 head(mytraindata)
+nrow(mytraindata)
 head(mytestdata)
+nrow(mytestdata)
 
 str(mytraindata)
 str(mytestdata)
@@ -17,6 +19,7 @@ summary(mytestdata)
 
 library("caret")
 install.packages("class")
+library("caret")
 library("class")
 predictknn <- knn(train=mytraindata[,-6],test=mytestdata[,-6],cl=mytraindata$Service,k=3)
 predictknn
