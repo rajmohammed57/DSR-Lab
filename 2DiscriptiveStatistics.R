@@ -13,11 +13,14 @@ mode(iris$Sepal.Length)
 min(iris$Sepal.Length)
 max(iris$Sepal.Length)
 
+quantile(iris$Sepal.Length,0.25)
+quantile(iris$Sepal.Length,0.75)
+
 str(iris)
 summary(iris)
 
 subset(iris,Sepal.Length<5)
-aggregate(.~Species,data=iris,mean)
+aggregate(.~iris$Species,mean,data=iris)
 
 
 # cars data set
@@ -34,6 +37,9 @@ mode(cars$speed)
 
 min(cars$speed)
 max(cars$speed)
+
+quantile(cars$speed,0.25)
+quantile(cars$speed,0.75)
 
 str(cars)
 summary(cars)
@@ -56,12 +62,15 @@ mode(mtcars$mpg)
 min(mtcars$mpg)
 max(mtcars$mpg)
 
+quantile(mtcars$mpg,0.25)
+quantile(mtcars$mpg,0.75)
+
 str(mtcars)
 summary(mtcars)
 
-subset(mtcars,hp>=200)
+subset(mtcars,mpg<11)
 
-aggregate(.~vs,data=mtcars,mean) #aggregate on vs or gears
+aggregate(.~mtcars$vs,data=mtcars,mean) #aggregate on vs or gears
 
 
 
