@@ -25,8 +25,20 @@ library("corrplot")
 corrplot(d1,method='circle')
 
 color <- c("red","green","blue","black")
-pairs(df,col=color,bg=color,pch=21)
+pairs(df,col=color,bg=color,pch=20)
 
 # covariance
 cov(df)
 cov(iris$Petal.Length,iris$Petal.Width)
+
+####Sir
+
+
+data(iris)
+iris
+mydata<-iris[,c(1,2,3,4)]
+mydata
+cor(mydata)
+cor(mydata$Sepal.Length,mydata$Sepal.Width)
+pairs(mydata,col=c("pink","green","black","red"),pch=20)
+cov(mydata)
